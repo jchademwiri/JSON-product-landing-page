@@ -1,0 +1,67 @@
+{
+	"products": [
+		{
+			"id": "1",
+			"name": "Travel Bag",
+			"image": "images/logo.jpg",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus",
+			"waranty": "1 year (s)",
+			"price": "550.00"
+		},
+		{
+			"id": "2",
+			"name": "Hand Bag",
+			"image": "images/logo.jpg",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus",
+			"waranty": "2 year (s)",
+			"price": "225.00"
+		},
+		{
+			"id": "3",
+			"name": "Laptop Bag",
+			"image": "images/logo.jpg",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus",
+			"waranty": "3 year (s)",
+			"price": "450.00"
+		},
+		{
+			"id": "4",
+			"name": "cover Bag",
+			"image": "images/logo.jpg",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus Lorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. RepellendusLorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus",
+			"waranty": "3 year",
+			"price": "150.00"
+		}
+	],
+	"users": [
+		{
+			"id": "1",
+
+			"name": "Travel Bag",
+			"description": "Description",
+			"waranty": "1 year (s)",
+			"price": "550.00"
+		},
+		{
+			"id": "2",
+			"name": "Hand Bag",
+			"description": "Description",
+			"waranty": "2 year (s)",
+			"price": "225.00"
+		},
+		{
+			"id": "3",
+			"name": "Laptop Bag",
+			"description": "Description",
+			"waranty": "3 year",
+			"price": "450.00"
+		},
+		{
+			"id": "4",
+			"name": "cover Bag",
+			"description": "Description",
+			"waranty": "3 year",
+			"price": "150.00"
+		}
+	]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+
+    <style>
+        /* Image Designing Propoerties */
+        .thumb {
+            height: 75px;
+            border: 1px solid #000;
+            margin: 10px 5px 0 0;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Add product</h1>
+    <form>
+        <input type="text" name="title" placeholder="product title"> <br>
+        <textarea name="description" id="" cols="30" rows="10" brplaceholder="product description"></textarea><br>
+        <input type="text" name="waranty" placeholder="product waranty"><br>
+        <input type="text" name="price" placeholder="product price"><br>
+        <input type="file" name="image" id="">
+    </br>
+    <img id="myImg" src="#" alt="image name" height=auto width=200>
+    <p class="imgSRC"></p>
+</form>
+</div>
+    
+    <script type="text/javascript">
+
+const url = document.querySelector('.imgSRC');
+/* The uploader form */
+window.addEventListener('load', function() {
+    document.querySelector('input[type="file"]').addEventListener('change', function() {
+        if (this.files && this.files[0]) {
+            var img = document.querySelector('img');  // $('img')[0]
+            img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+            img.onload = imageIsLoaded;
+        }
+    });
+});
+
+function imageIsLoaded() { 
+   // alert(this.src);  // blob url
+    // update width and height ...
+    url.innerHTML=this.src;
+}
+    
+    </script>
+    
+    
+</body>
+</html>

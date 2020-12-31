@@ -1,0 +1,14 @@
+{
+	"name": "product_landing_page",
+	"version": "1.0.0",
+	"description": "Original leather products",
+	"main": "index.js",
+	"scripts": {
+		"server": "json-server --watch data/db.json"
+	},
+	"author": "Jacob Chademwiri",
+	"license": "ISC",
+	"dependencies": {
+		"json-server": "^0.16.3"
+	}
+}
