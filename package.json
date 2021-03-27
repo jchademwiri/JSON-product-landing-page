@@ -4,7 +4,7 @@
 	"description": "Original leather products",
 	"main": "index.js",
 	"scripts": {
-		"server": "json-server --watch data/db.json"
+		"server": "json-server"
 	},
 	"author": "Jacob Chademwiri",
 	"license": "ISC",
