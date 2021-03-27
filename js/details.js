@@ -1,20 +1,28 @@
+// javascript for details.html
 const id = new URLSearchParams(window.location.search).get('id');
 const container = document.querySelector('.details');
+const deleteBtn = document.querySelector('.delete');
 
 const renderDetails = async () => {
-	const res = await fetch('http://localhost:3000/products/' + id);
-	const product = await res.json();
-	// let template = '';
-	let template = `
-       
-        <h2 class="title p-5">${product.name}</h2>
-        <img src="data/${product.image}" alt="${product.name}">
-        <p class ="p-5">${product.description}</p>
-        <p class ="p-5">Waranty: ${product.waranty}</p>
-        <p class ="p-5">Price : R ${product.price}</p>
-		
-        `;
+	const res = await fetch('http://localhost:3000/posts/' + id);
+	if (!res.ok) {
+		window.location.replace('/');
+	}
+	const post = await res.json();
+
+	const template = `
+    <h1>${post.title}</h1>
+    <p>${post.body}</p>
+  `;
+
 	container.innerHTML = template;
 };
 
-window.addEventListener('DOMContentLoaded', () => renderDetails());
+deleteBtn.addEventListener('click', async () => {
+	const res = await fetch('http://localhost:3000/posts/' + id, {
+		method: 'DELETE',
+	});
+	window.location.replace('/');
+});
+
+window.addEventListener('DOMContentLoaded', renderDetails);

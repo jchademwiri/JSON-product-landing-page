@@ -1,31 +1,37 @@
-const container = document.querySelector('.products');
-const renderProducts = async () => {
-	let url = 'http://localhost:3000/products';
+// javascript for index.html
+const container = document.querySelector('.blogs');
+const searchForm = document.querySelector('.search');
 
-	const res = await fetch(url);
+const renderPosts = async (term) => {
+	console.log(term);
+	let uri = 'http://localhost:3000/posts?_sort=likes&_order=desc';
+	if (term) {
+		uri += `&q=${term}`;
+	}
 
-	const products = await res.json();
-	console.log(products);
+	const res = await fetch(uri);
+	const posts = await res.json();
+	console.log(posts);
 
 	let template = '';
-	products.forEach((product) => {
+	posts.forEach((post) => {
 		template += `
-        <div class="product">
-		<a class ="p-5" href="/details.html">
-			<h2 class="title p-5">${product.name}</h2>
-		</a>
-		
-		<img src="data/${product.image}" alt="${product.name}">
-		
-		<p class ="p-5">${product.description.slice(0, 100)}</p>
-		
-        <p class ="p-5">${product.waranty}</p>
-        <p class ="p-5">R ${product.price}</p>
-		<a class ="details-link" href="/details.html?id=${product.id}"> read more...</a>
-		</div>
-        `;
+      <div class="post">
+        <h2>${post.title}</h2>
+        <p><small>${post.likes} likes</small></p>
+        <p>${post.body.slice(0, 200)}...</p>
+        <a href="/details.html?id=${post.id}">Read more</a>
+      </div>
+    `;
 	});
+
 	container.innerHTML = template;
 };
 
-window.addEventListener('DOMContentLoaded', () => renderProducts());
+// search
+searchForm.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	renderPosts(searchForm.term.value.trim());
+});
+
+window.addEventListener('DOMContentLoaded', () => renderPosts());
